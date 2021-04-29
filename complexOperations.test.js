@@ -100,6 +100,38 @@ describe('complexOperation - Unit Tests', () => {
         });
     });
 
+    describe('intersectionBetweenArrays', () => {
+        it('first test for intersectionBetweenArrays', () => {
+            expect(complexOperations.intersectionBetweenArrays([1, 2, 3])).toBe('The params should be arrays');
+        });
+        it('second test for intersectionBetweenArrays', () => {
+            expect(complexOperations.intersectionBetweenArrays(['one', 2], [5, 8])).not.toContain(
+                'The params should be arrays'
+            );
+        });
+        it('third test for intersectionBetweenArrays', () => {
+            expect(complexOperations.intersectionBetweenArrays([1, 2, -1, 0, 8, 7], [9, 10])).toBe(
+                'There are not matching elements'
+            );
+        });
+        const expected = [1, 2];
+        it('fourth: matches even if received contains additional elements', () => {
+            expect(complexOperations.intersectionBetweenArrays([1, 2, 3], [1, 2])).toEqual(
+                expect.arrayContaining(expected)
+            );
+        });
+        it('fifth test for intersectionBetweenArrays', () => {
+            expect(complexOperations.intersectionBetweenArrays([1, 2, -1, 0, 8, 7], [9, 10])).toBe(
+                'There are not matching elements'
+            );
+        });
+        const object = { name: 'santi' };
+        it('sixth test for intersectionBetweenArrays', () => {
+            expect(complexOperations.intersectionBetweenArrays([null, 'hello', object, undefined, 5.55], ['bye'])).toBe(
+                'There are not matching elements'
+            );
+        });
+    });
     /*
     describe('sortArrayOfObjectsByKey', () => {
         it('first test for sortArrayOfObjectsByKey', () => {});
