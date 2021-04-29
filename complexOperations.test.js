@@ -132,11 +132,66 @@ describe('complexOperation - Unit Tests', () => {
             );
         });
     });
-    /*
-    describe('sortArrayOfObjectsByKey', () => {
-        it('first test for sortArrayOfObjectsByKey', () => {});
-    });
 
+    describe('sortArrayOfObjectsByKey', () => {
+        it('first test for sortArrayOfObjectsByKey', () => {
+            expect(
+                complexOperations.sortArrayOfObjectsByKey(
+                    [{ country: 'Argentina' }, { country: 'Suiza' }, { country: 'Australia' }],
+                    'country'
+                )
+            ).toEqual([{ country: 'Argentina' }, { country: 'Australia' }, { country: 'Suiza' }]);
+        });
+        it('second test for sortArrayOfObjectsByKey', () => {
+            expect(complexOperations.sortArrayOfObjectsByKey({}, ['Hello', 'How are you'])).toBe(
+                'The first param should be an array'
+            );
+        });
+        const a = function handleSubmit() {
+            console.log('This is void a function');
+        };
+        it('third test for sortArrayOfObjectsByKey', () => {
+            expect(complexOperations.sortArrayOfObjectsByKey([null], [{ name: 'Thomas' }, a])).toBe(
+                'The second param should be an string'
+            );
+        });
+        it('fourth test for sortArrayOfObjectsByKey', () => {
+            expect(
+                complexOperations.sortArrayOfObjectsByKey([{ a, date: '29/09/97' }, true], 'My name is santi')
+            ).toContain('Some elements in the array does not have the My name is santi property');
+        });
+        it('fifth test for sortArrayOfObjectsByKey', () => {
+            expect(
+                complexOperations.sortArrayOfObjectsByKey(
+                    [
+                        { country: 'Argentina', age: 19, visa: true },
+                        { country: 'Suiza', age: 32, visa: false },
+                        { country: 'Australia', age: 60, visa: true },
+                    ],
+                    'age'
+                )
+            ).not.toContain('lastname');
+        });
+        const expected = [{ city: 'Buenos aires' }, { city: 'Santa fe' }, { city: 'Rosario' }];
+        it('sixth: matches even if received contains additional elements', () => {
+            expect(
+                complexOperations.sortArrayOfObjectsByKey(
+                    [{ city: 'Buenos aires' }, { city: 'Santa fe' }, { city: 'Rosario' }],
+                    'city'
+                )
+            ).toEqual(expect.arrayContaining(expected));
+        });
+        const expected2 = [{ country: 'Buenos aires' }, { city: 'Santa fe' }, { city: 'Rosario' }];
+        it('seventh: matches even if received contains additional elements', () => {
+          expect(
+              complexOperations.sortArrayOfObjectsByKey(
+                  [{ city: 'Buenos aires' }, { city: 'Santa fe' }, { city: 'Rosario' }],
+                  'city'
+              )
+          ).toEqual(expect.not.arrayContaining(expected2));
+      });
+    });
+    /*
     describe('numberOfOddAndEvenNumbers', () => {
         it('first test for numberOfOddAndEvenNumbers', () => {});
     }); */

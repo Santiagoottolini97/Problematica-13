@@ -118,7 +118,7 @@ export const intersectionBetweenArrays = (array1, array2) => {
 
 // console.log(intersectionBetweenArrays())
 //console.log(intersectionBetweenArrays([1,2,3]));
-console.log(intersectionBetweenArrays([1, 2, 3, 5, 17, -5, 8], [1, 2]));
+//console.log(intersectionBetweenArrays([1, 2, 3, 5, 17, -5, 8], [1, 2]));
 // console.log(intersectionBetweenArrays([1,2,3], [5]));
 // console.log(intersectionBetweenArrays(['test',2,3], ['test', 5]));
 
@@ -141,10 +141,10 @@ export const sortArrayOfObjectsByKey = (array, key) => {
     return sortArrayByKey(array, key);
 };
 
-// console.log(sortArrayOfObjectsByKey([{ name: 'Guille' }, { name: 'Rodrigo' }, { name: 'David' }], 'name'));
-// console.log(sortArrayOfObjectsByKey(undefined, 'name'));
+console.log(sortArrayOfObjectsByKey([{ country: 'Argentina', age:29 }, { country: 'Suiza', age:29 }, { country: 'Australia', age:29 }], 'country'));
+//console.log(sortArrayOfObjectsByKey(undefined, ['name']));
 // console.log(sortArrayOfObjectsByKey([{ name: 'Guille' }, { name: 'Rodrigo' }, { name: 'David' }], 1));
-// console.log(sortArrayOfObjectsByKey([{ name: 'Guille' }, { name: 'Rodrigo' }, { name: 'David' }], ''));
+ console.log(sortArrayOfObjectsByKey([{a:"A", date:"29/09/97"}, true], "My name is santi"));
 // console.log(sortArrayOfObjectsByKey([{ name: 'Guille' }, { name: 'Rodrigo' }, { noName: 'NoName' }], 'name'));
 
 /**
