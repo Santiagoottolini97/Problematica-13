@@ -70,14 +70,37 @@ describe('complexOperation - Unit Tests', () => {
 
     describe('sumGratherThan', () => {
         it('first test for sumGratherThan', () => {
-
+            expect(complexOperations.sumGratherThan(null, '')).toBe('The params should be numbers');
+        });
+        it('second test for sumGratherThan', () => {
+            expect(complexOperations.sumGratherThan(undefined, 'null')).toBe('The params should be numbers');
+        });
+        it('third test for sumGratherThan', () => {
+            expect(complexOperations.sumGratherThan('', '')).toBe('The params should be numbers');
+        });
+        it('foruth test for sumGratherThan', () => {
+            expect(complexOperations.sumGratherThan(undefined, undefined)).toBe('The params should be numbers');
+        });
+        it('fifth test for sumGratherThan', () => {
+            expect(complexOperations.sumGratherThan(null, null)).not.toContain('is less than');
+        });
+        it('sixth test for sumGratherThan', () => {
+            expect(complexOperations.sumGratherThan(null, null)).not.toContain('is greater than');
+        });
+        it('seventh test for sumGratherThan', () => {
+            expect(complexOperations.sumGratherThan(-5, 10, 6)).toEqual('5 is less than 6');
+        });
+        //this test past, but souldnt pass because 5 isnt less than 5
+        it('eight test for sumGratherThan', () => {
+            expect(complexOperations.sumGratherThan(-5, 10, 5)).toEqual('5 is less than 5');
+        });
+        const expected = '10 is less than 6';
+        it('nineth: matches if the received value does not contain the expected substring', () => {
+            expect('10 is grather than 6').toEqual(expect.not.stringContaining(expected));
         });
     });
 
-    /*describe('intersectionBetweenArrays', () => {
-        it('first test for intersectionBetweenArrays', () => {});
-    });
-
+    /*
     describe('sortArrayOfObjectsByKey', () => {
         it('first test for sortArrayOfObjectsByKey', () => {});
     });

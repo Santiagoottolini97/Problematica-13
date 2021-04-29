@@ -95,8 +95,8 @@ export const sumGratherThan = (number1, number2, number3) => {
 };
 
 // console.log(sumGratherThan());
-// console.log(sumGratherThan([], undefined));
-// console.log(sumGratherThan(1, 5, 10));
+//console.log(sumGratherThan(null, ""));
+//console.log(sumGratherThan(0, 10, 6));
 // console.log(sumGratherThan(1, 5, 5));
 
 /**
@@ -117,8 +117,8 @@ export const intersectionBetweenArrays = (array1, array2) => {
 };
 
 // console.log(intersectionBetweenArrays())
-// console.log(intersectionBetweenArrays([1,2,3]));
-// console.log(intersectionBetweenArrays([1,2,3], [1]));
+//console.log(intersectionBetweenArrays([1,2,3]));
+console.log(intersectionBetweenArrays([1, 2, 3, 5, 17, -5, 8], [1, 2]));
 // console.log(intersectionBetweenArrays([1,2,3], [5]));
 // console.log(intersectionBetweenArrays(['test',2,3], ['test', 5]));
 
