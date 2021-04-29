@@ -66,12 +66,12 @@ export const calculateArea = (figure, number1, number2 = 0) => {
     }
 };
 
-// console.log(calculateArea());
-// console.log(calculateArea('square'));
-// console.log(calculateArea('square', 'hola', 3));
+//console.log(calculateArea());
+//console.log(calculateArea("square", 8, 9));
+//console.log(calculateArea('triangle', 'rectangle', 10));
 // console.log(calculateArea('square', 3, 'hola'));
 // console.log(calculateArea('square', 3, 3));
-// console.log(calculateArea('rectangle', 3, 4));
+//console.log(calculateArea('rectangle', 2, 7));
 // console.log(calculateArea('triangle', 5, 4));
 // console.log(calculateArea('square', 5)); // number two takes 0 as default value
 // console.log(calculateArea('circle', 4)); // number two takes 0 as default value
