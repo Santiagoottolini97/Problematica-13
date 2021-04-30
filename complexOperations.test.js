@@ -183,16 +183,38 @@ describe('complexOperation - Unit Tests', () => {
         });
         const expected2 = [{ country: 'Buenos aires' }, { city: 'Santa fe' }, { city: 'Rosario' }];
         it('seventh: matches even if received contains additional elements', () => {
-          expect(
-              complexOperations.sortArrayOfObjectsByKey(
-                  [{ city: 'Buenos aires' }, { city: 'Santa fe' }, { city: 'Rosario' }],
-                  'city'
-              )
-          ).toEqual(expect.not.arrayContaining(expected2));
-      });
+            expect(
+                complexOperations.sortArrayOfObjectsByKey(
+                    [{ city: 'Buenos aires' }, { city: 'Santa fe' }, { city: 'Rosario' }],
+                    'city'
+                )
+            ).toEqual(expect.not.arrayContaining(expected2));
+        });
     });
-    /*
+
     describe('numberOfOddAndEvenNumbers', () => {
-        it('first test for numberOfOddAndEvenNumbers', () => {});
-    }); */
+        it('first test for numberOfOddAndEvenNumbers', () => {
+            expect(complexOperations.numberOfOddAndEvenNumbers([1, 4, 11, 8, 9])).toEqual({ even: 2, odd: 3 });
+        });
+        it('second test for numberOfOddAndEvenNumbers', () => {
+            expect(complexOperations.numberOfOddAndEvenNumbers([72, 1002.52, 3.14, 88.3])).toStrictEqual({
+                even: 1,
+                odd: 3,
+            });
+        });
+        it('third test for numberOfOddAndEvenNumbers', () => {
+            expect(complexOperations.numberOfOddAndEvenNumbers([{}, null, undefined, 'hola'])).not.toContain('even');
+        });
+        it('fourth test for numberOfOddAndEvenNumbers', () => {
+            expect(complexOperations.numberOfOddAndEvenNumbers(['1', '2', '3', '4'])).toBe(
+                'The array should have only numbers'
+            );
+        });
+        it('fifth test for numberOfOddAndEvenNumbers', () => {
+            expect(complexOperations.numberOfOddAndEvenNumbers({ one: 1, two: 2 })).toContain('be an array');
+        });
+        it('sixth test for numberOfOddAndEvenNumbers', () => {
+            expect(complexOperations.numberOfOddAndEvenNumbers(['1', '2', 3, 'four'])).not.toContain('even odds');
+        });
+    });
 });

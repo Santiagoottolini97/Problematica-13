@@ -141,10 +141,10 @@ export const sortArrayOfObjectsByKey = (array, key) => {
     return sortArrayByKey(array, key);
 };
 
-console.log(sortArrayOfObjectsByKey([{ country: 'Argentina', age:29 }, { country: 'Suiza', age:29 }, { country: 'Australia', age:29 }], 'country'));
+//console.log(sortArrayOfObjectsByKey([{ country: 'Argentina', age:29, visa: true }, { country: 'Suiza', age:29, visa: false }, { country: 'Australia', age:29, visa: true }], 'country'));
 //console.log(sortArrayOfObjectsByKey(undefined, ['name']));
 // console.log(sortArrayOfObjectsByKey([{ name: 'Guille' }, { name: 'Rodrigo' }, { name: 'David' }], 1));
- console.log(sortArrayOfObjectsByKey([{a:"A", date:"29/09/97"}, true], "My name is santi"));
+//console.log(sortArrayOfObjectsByKey([{a:"A", date:"29/09/97"}, true], "My name is santi"));
 // console.log(sortArrayOfObjectsByKey([{ name: 'Guille' }, { name: 'Rodrigo' }, { noName: 'NoName' }], 'name'));
 
 /**
@@ -166,7 +166,7 @@ export const numberOfOddAndEvenNumbers = (array) => {
     };
 };
 
-/* console.log(numberOfOddAndEvenNumbers([1, 4, 5, 8, 9]));
-console.log(numberOfOddAndEvenNumbers([1.3, 4.2]));
-console.log(numberOfOddAndEvenNumbers());
-console.log(numberOfOddAndEvenNumbers([1, 'string'])); */
+//console.log(numberOfOddAndEvenNumbers([1, 4, 11, 8, 9]));
+//console.log(numberOfOddAndEvenNumbers([72, null, 3.14, 88.3]));
+//console.log(numberOfOddAndEvenNumbers(["1", "2", "3", "4"]));
+console.log(numberOfOddAndEvenNumbers([1, 'string'])); 
