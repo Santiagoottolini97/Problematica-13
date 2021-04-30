@@ -169,4 +169,4 @@ export const numberOfOddAndEvenNumbers = (array) => {
 //console.log(numberOfOddAndEvenNumbers([1, 4, 11, 8, 9]));
 //console.log(numberOfOddAndEvenNumbers([72, null, 3.14, 88.3]));
 //console.log(numberOfOddAndEvenNumbers(["1", "2", "3", "4"]));
-console.log(numberOfOddAndEvenNumbers([1, 'string'])); 
+console.log(numberOfOddAndEvenNumbers([1, 'string']));
