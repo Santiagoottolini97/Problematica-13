@@ -6,18 +6,17 @@ describe('complexOperation- Mocked Tests', () => {
         it('first test for checkEmail', () => {
             expect(complexOperations.checkEmail('santi@gmail.com')).toBe('The email is valid');
         });
-        //This mail is invalid, but pass the test...
         it('second test for checkEmail', () => {
-            expect(complexOperations.checkEmail('.com@gmail')).toBe('The email is valid');
-        });
-        it('third test for checkEmail', () => {
-            expect(complexOperations.checkEmail('santi@gmail.com')).toBe('The email is valid');
-        });
-        it('fourth test for checkEmail', () => {
             expect(complexOperations.checkEmail('santi@hotmail.com')).toBe('The email is valid');
         });
-        it('fifth test for checkEmail', () => {
+        it('third test for checkEmail', () => {
             expect(complexOperations.checkEmail('santi@yahoo.com')).toBe('The email is valid');
+        });
+        it('fourth test for checkEmail', () => {
+            expect(complexOperations.checkEmail('santi@yahoo.com')).toContain('valid');
+        });
+        it('fifth test for checkEmail', () => {
+            expect(complexOperations.checkEmail('test@yahoo.com')).not.toContain('invalid');
         });
     });
 

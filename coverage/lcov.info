@@ -200,7 +200,7 @@ BRH:41
 end_of_record
 TN:
 SF:operations.mock.js
-FN:19,(anonymous_0)
+FN:17,(anonymous_0)
 FNF:1
 FNH:1
 FNDA:1,(anonymous_0)
@@ -214,12 +214,12 @@ DA:8,1
 DA:9,1
 DA:10,1
 DA:11,1
+DA:12,1
+DA:13,1
 DA:14,1
 DA:15,1
-DA:16,1
 DA:17,1
-DA:19,1
-DA:20,1
+DA:18,1
 LF:16
 LH:16
 BRF:0
